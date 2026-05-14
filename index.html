@@ -3,68 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FR Tecnología | Táchira</title>
+    <title>FR Tecnología</title>
     <style>
-        /* La base: Definimos colores y tipografía */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #0d1117; /* Fondo oscuro tipo GitHub */
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #0d1117;
             color: #ffffff;
             margin: 0;
             display: flex;
-            flex-direction: column;
-            align-items: center;
             justify-content: center;
+            align-items: center;
             height: 100vh;
-            text-align: center;
         }
-
-        /* Creamos un contenedor elegante */
         .container {
             border: 1px solid #30363d;
             padding: 3rem;
             border-radius: 12px;
-            background: linear-gradient(145deg, #161b22, #0d1117);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            background-color: #161b22;
+            text-align: center;
+            max-width: 400px;
         }
-
+        /* ESTILO PARA TU LOGO */
+        .logo {
+            width: 120px; /* Ajusta el tamaño aquí */
+            height: auto;
+            margin-bottom: 20px;
+            /* Si no le quitaste el fondo blanco, usa la línea de abajo para que no choque tanto */
+            /* border-radius: 50%; */ 
+        }
         h1 {
-            color: #CCCCCC; /* Gris tecnológico */
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
+            font-size: 2rem;
+            margin: 10px 0;
+            letter-spacing: 1px;
         }
-
         p {
             color: #8b949e;
-            font-size: 1.1rem;
+            font-size: 1rem;
+            margin: 5px 0;
         }
-
-        /* Un botón con efecto visual */
+        .services {
+            font-style: italic;
+            margin-top: 15px;
+            color: #58a6ff;
+        }
         .btn {
             display: inline-block;
-            margin-top: 20px;
-            padding: 10px 25px;
-            background-color: #238636; /* Verde éxito */
+            margin-top: 25px;
+            padding: 12px 30px;
+            background-color: #238636;
             color: white;
             text-decoration: none;
             border-radius: 6px;
             font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .btn:hover {
-            background-color: #2ea043;
-            transform: scale(1.05);
         }
     </style>
 </head>
 <body>
 
     <div class="container">
+        <!-- AQUÍ SE PONE LA IMAGEN -->
+        <img src="logo.png" alt="Logo FR Tecnología" class="logo">
+        
         <h1>FR TECNOLOGÍA</h1>
-        <p>Soluciones tecnólogicas para tu hogar o negocio.</p>
-        <p><i>Redes | Cámaras | Servicio Técnico especializado.</i></p>
-        <a href="#" class="btn">Contactanos</a>
+        <p>Soluciones tecnológicas para tu hogar o negocio.</p>
+        <p class="services">Redes | Cámaras | Servicio Técnico especializado</p>
+        
+        <a href="https://wa.me/tu_numero" class="btn">Contactanos</a>
     </div>
 
 </body>
