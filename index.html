@@ -4,93 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FR Tecnología</title>
-    <!-- Importamos Montserrat desde Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Montserrat:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body {
-            /* 1. Fondo de la pagina BLANCO */
             background-color: #ffffff;
-            font-family: 'Montserrat', 'Bahnschrift', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             margin: 0;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            flex-direction: column;
+            min-height: 100vh;
             color: #000000;
+            position: relative; /* Necesario para la marca de agua */
+            overflow-x: hidden;
+        }
+
+        /* MARCA DE AGUA */
+        .watermark {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            font-size: 8rem;
+            color: rgba(0, 0, 0, 0.03); /* Casi invisible */
+            font-weight: 800;
+            z-index: -1; /* Va detrás de todo */
+            pointer-events: none;
+            white-space: nowrap;
+            user-select: none;
         }
 
         .container {
-            /* Eliminamos el borde oscuro para un look más limpio sobre blanco */
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            max-width: 500px;
             padding: 2rem;
         }
 
-        .logo {
-            width: 140px;
-            height: auto;
-            margin-bottom: 10px;
-            /* Filtro opcional: si el logo es muy oscuro, esto le da nitidez */
-            filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.1));
-        }
-
-        h1 {
-            /* 2 y 3. Título Montserrat/Bahnschrift Negrita Negro */
-            font-family: 'Montserrat', 'Bahnschrift', sans-serif;
-            font-weight: 800; 
-            font-size: 2.5rem;
-            color: #000000;
-            margin: 0;
-            text-transform: uppercase;
-        }
-
-        .slogan {
-            /* 4. Eslogan Montserrat/Bahnschrift Negro */
-            font-family: 'Montserrat', sans-serif;
-            color: #000000;
-            font-size: 1.1rem;
-            margin-top: 5px;
-            font-weight: 400;
-        }
-
-        .services {
-            /* Un plateado un poco más oscuro para que se lea bien sobre blanco */
-            color: #7a7a7a; 
-            font-size: 0.95rem;
-            margin-top: 15px;
-        }
+        .logo { max-width: 150px; margin-bottom: 10px; }
+        h1 { font-weight: 800; font-size: 2.5rem; margin: 0; text-transform: uppercase; }
+        .slogan { font-size: 1.1rem; margin-top: 5px; }
+        .services { color: #7a7a7a; font-size: 0.95rem; margin-top: 15px; }
 
         .btn {
             display: inline-block;
             margin-top: 30px;
             padding: 14px 40px;
             background-color: #238636;
-            /* Plateado claro para el texto del botón */
-            color: #e0e0e0; 
+            color: #e0e0e0;
             text-decoration: none;
             border-radius: 8px;
-            font-weight: 700;
-            text-transform: uppercase; /* Lo hace ver más profesional */
-            letter-spacing: 1px;
+            font-weight: bold;
         }
 
-        .btn:hover {
-            background-color: #1e722e;
-            transform: translateY(-2px);
+        /* PIE DE PÁGINA (RRSS) */
+        footer {
+            padding: 2rem;
+            background-color: #f8f9fa;
+            border-top: 1px solid #eeeeee;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
         }
+
+        .social-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: #444;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .social-item i { font-size: 1.5rem; color: #000; }
+        .social-item:hover { color: #238636; }
     </style>
 </head>
 <body>
 
+    <!-- Marca de agua -->
+    <div class="watermark">FR TECNOLOGÍA</div>
+
     <div class="container">
         <img src="logo.png" alt="Logo FR Tecnología" class="logo">
-        
-        <h1>FR TECNOLOGIA</h1>
+        <h1>FRTECNOLOGIA</h1>
         <p class="slogan">Soluciones tecnológicas para tu hogar o negocio</p>
-        <p class="services">Redes | Cámaras | PC | Servicio Técnico e Instalación</p>
-        
+        <p class="services">Redes | Cámaras | Instalaciones | Servicio Técnico especializado PC</p>
         <a href="https://wa.me/584147388779" class="btn">Contactanos</a>
     </div>
+
+    <footer>
+        <a href="https://wa.me/584147388779" class="social-item">
+            <i class="fa-brands fa-whatsapp"></i> +58 414-7388779
+        </a>
+        <a href="https://instagram.com/frtecnologia.sc" class="social-item">
+            <i class="fa-brands fa-instagram"></i> @frtecnologia.sc
+        </a>
+        <a href="https://t.me/frtecnologia_sc" class="social-item">
+            <i class="fa-brands fa-telegram"></i> @frtecnologia_sc
+        </a>
+    </footer>
 
 </body>
 </html>
