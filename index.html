@@ -24,8 +24,19 @@
             min-height: 100vh;
         }
 
+        @keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
         /* Contenedor Principal */
         .container {
+            border-top: 4px solid #000; /* O un azul eléctrico si quieres romper el blanco/negro */
             flex: 1;
             display: flex;
             flex-direction: column;
@@ -33,16 +44,15 @@
             align-items: center;
             text-align: center;
             padding: 2rem;
-            
-            /* ESTO ES LO NUEVO: */
             background-color: rgba(255, 255, 255, 0.85); /* Blanco con 85% de opacidad */
             backdrop-filter: blur(5px); /* Efecto de desenfoque muy moderno */
             border-radius: 20px; /* Bordes suaves */
             max-width: 600px; /* Para que no ocupe todo el ancho */
             margin: auto; /* Centrado */
             box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Sombra muy sutil */
+            animation: fadeInUp 1s ease-out;
         }
-
+        
         .logo {
             /* Ajuste para el nuevo logo3.png */
             max-width: 180px; 
@@ -87,9 +97,11 @@
         }
 
         .btn:hover {
-            background-color: #333; /* Un gris muy oscuro */
+            background-color: #222; /* Un gris muy oscuro */
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+            transform: scale(1.05);
             letter-spacing: 2px;    /* El texto se expande un poco */
-            transition: 0.4s;
+            transition: all 0.3s ease;
         }
 
         /* Pie de Página (RRSS) */
